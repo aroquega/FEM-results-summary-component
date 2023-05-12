@@ -29,7 +29,13 @@
     --dark-gray-blue: hsl(var(--base-dark-gray-blue));
     --dark-gray-blue-transparent: hsla(var(--base-dark-gray-blue), 0.5);
 
+    --shadow-color: hsla(var(--base-dark-gray-blue), 0.1);
+
     font-family: 'Hanken Grotesk', sans-serif;;
+}
+
+body {
+    background-color: var(--pale-blue);
 }
 
 .layout {
@@ -55,6 +61,10 @@
 
 ul {
     list-style-type: none;
+}
+
+.card {
+    background-color: var(--white);
 }
 
 .card-header {
@@ -200,4 +210,29 @@ ul {
     background-color: #38363b;
     color: var(--white);
     padding: 2rem;
+}
+
+
+@media screen and (min-width: 700px) {
+    .layout__main {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .card {
+        max-width: 600px;
+        display: flex;
+        border-radius: 32px;
+        align-self: center;
+        box-shadow: 10px 10px 30px var(--shadow-color);
+    }
+
+    .card-header {
+        width: 50%;
+        border-radius: 32px;
+    }
+    .card-body {
+        width: 50%;
+    }
 }
